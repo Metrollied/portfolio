@@ -1,0 +1,12 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		body
+			nav#navBar
+				a.navLink(href="#intro") Home
+				a.navLink(href="#aboutMeSection") About
+				a.navLink(href="/projects") Projects
+				a.navLink(href="/contact") Contact
+			block content

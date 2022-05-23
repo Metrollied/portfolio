@@ -1,0 +1,299 @@
+:root {
+	/* CSS HEX */
+	--orange-pantone: #fc5802ff;
+	--orange: #f68105ff;
+	--yellow-orange: #fcaa37ff;
+	--viridian-green: #259ea1ff;
+	--teal: #008083ff;
+	--skobeloff: #026061ff;
+	--rich-black: #0C3131;
+	--white: rgb(255, 255, 255);
+
+}
+
+@keyframes FadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+
+@font-face {
+	font-family: 'DM Sans Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('./DM Sans Regular'), url('../fonts/dm-sans/DMSans-Regular.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'DM Sans Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('DM Sans Italic'), url('../fonts/dm-sans/DMSans-Italic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'DM Sans Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: local('DM Sans Medium'), url('../fonts/dm-sans/DMSans-Medium.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'DM Sans Medium Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('DM Sans Medium Italic'), url('../fonts/dm-sans/DMSans-MediumItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'DM Sans Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('DM Sans Bold'), url('../fonts/dm-sans/DMSans-Bold.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'DM Sans Bold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('DM Sans Bold Italic'), url('../fonts/dm-sans/DMSans-BoldItalic.woff') format('woff');
+}
+
+a {
+	text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+body {
+	background-color: var(--rich-black);
+	color: var(--white);
+	font-family: "DM Sans Regular";
+}
+
+h1 {
+	font-family: "DM Sans Bold";
+	font-size: 3em;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+#introText {
+	position: absolute;
+	top: 50%;
+	left: 3rem;
+	text-align: left;
+	font-family: "DM Sans Bold";
+	animation-duration: 2s;
+	animation-name: FadeIn;
+}
+
+#introText>h1 {
+	font-family: "DM Sans Bold";
+	font-size: 3em;
+}
+
+#introText>h2 {
+	font-family: "DM Sans Italic";
+}
+
+#intro {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#introBackground {
+	height: 100vh;
+	width: 100vw;
+	object-fit: cover;
+}
+
+#navBar {
+	background-color: var(--rich-black);
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	gap: 1em;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	padding-right: 2em;
+	z-index: 5;
+}
+
+.navLink {
+	display: inline-block;
+	position: relative;
+	font-size: 1.5em;
+	color: var(--white);
+	margin-right: 2em;
+	animation-duration: 2s;
+	animation-name: FadeIn;
+}
+
+.navLink:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--orange);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.navLink:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+#aboutMeSection {
+	height: calc(100vh - 3rem);
+	padding-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: baseline;
+	padding-left: 3rem;
+	padding-bottom: 2rem;
+	border-top: 2px solid var(--viridian-green);
+	border-bottom: 2px solid var(--viridian-green);
+}
+
+#aboutMeSection > h1 {
+	text-decoration: underline var(--orange);
+}
+
+#aboutMeSection > * {
+	width: 50%;
+}
+
+.itemStyleOne, .itemStyleTwo {
+	display: flex;
+	flex-direction: row;	
+	width: 100vw;
+	height: 25rem;
+	padding: 1rem 0;
+	gap: 1rem;
+}
+
+.itemStyleOne {
+	text-align: right;
+	background-color: var(--skobeloff);
+}
+
+.itemStyleOne > .itemTextDisplay {
+	align-items: end;
+}
+
+.itemStyleOne > .itemTextDisplay > h4 {
+	padding-left: 3rem;
+	max-width: 50%;
+}
+
+.itemStyleTwo {
+	flex-direction: row-reverse;
+}
+
+.itemStyleOne > *, .itemStyleTwo > * {
+	max-width: 50%;
+}
+
+.itemStyleTwo > .itemTextDisplay > h4 {
+	padding-right: 3rem;
+	max-width: 67%;
+}
+
+.itemImageDisplay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+.itemImageDisplay > img {
+	max-height: 80%;
+	max-width: 100%;
+}
+
+.itemTextDisplay {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.itemTextDisplay > h1 {
+	text-decoration: underline solid var(--orange);
+}
+
+#portfolioSection {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.itemLink {
+	display: inline-block;
+	position: relative;
+	font-size: 1.5em;
+	color: var(--white);
+	animation-duration: 2s;
+	animation-name: FadeIn;
+	width: max-content;
+}
+
+.itemLink:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--orange);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.itemLink:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+
+#footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

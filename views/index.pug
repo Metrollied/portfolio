@@ -1,0 +1,38 @@
+extends layout
+
+block content
+	div#intro
+		img#introBackground(src="../images/Black-Animation-Background.svg")
+		div#introText
+			h1 Oliver Crawford
+			h2 Web Developer
+	div#aboutMeSection
+		h1 About Me
+		h2 Hi! I am a Web Developer with experience working in front and back technologies.
+		h2 For the last six years I have worked in Secondary Schools in the UK teaching Maths and Computer Science. Now, I'm looking for a new challenge  and a new career as a Web Developer.
+		h2 Keep scrolling to see examples of my work and ways to get in touch.
+		h2 Thanks!
+	div#portfolioSection
+		for item in items
+			if item.number%2===0
+				div.itemStyleOne
+					div.itemTextDisplay
+						h1 !{item.title}
+						h4 !{item.description}
+						a.itemLink(href=item.linkurl) Go to !{item.title}
+					div.itemImageDisplay
+						img(src=item.imageurl)
+			else
+				div.itemStyleTwo
+					div.itemTextDisplay
+						h1 !{item.title}
+						h4 !{item.description}
+						a.itemLink(href=item.linkurl) Go to !{item.title}
+					div.itemImageDisplay
+						img(src=item.imageurl)
+
+
+	
+
+	div#footer
+		p Created by Oliver Crawford 2022
