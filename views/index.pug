@@ -2,16 +2,21 @@ extends layout
 
 block content
 	div#intro
-		img#introBackground(src="../images/Black-Animation-Background.svg")
+		img#introBackground(src="../images/Fade-In-Background.svg")
 		div#introText
-			h1 Oliver Crawford
+			h1 Ollie Crawford
 			h2 Web Developer
 	div#aboutMeSection
-		h1 About Me
-		h2 Hi! I am a Web Developer with experience working in front and back technologies.
-		h2 For the last six years I have worked in Secondary Schools in the UK teaching Maths and Computer Science. Now, I'm looking for a new challenge  and a new career as a Web Developer.
-		h2 Keep scrolling to see examples of my work and ways to get in touch.
-		h2 Thanks!
+		div#aboutMeText
+			h1 About Me
+			h2 I am a Web Developer with experience working in front and back end technologies.
+			h2 For the last six years I have worked in secondary schools in the Midlands teaching Maths and Computer Science. Now I am looking for a new challenge in the career of Web Development.
+			h2 Although I have enjoyed my time as a teacher and appreciate all the teamwork, time management and interpersonal skills it has given me, Web Development offers a chance to work both logically and creatively, which I find very satisfying.
+			h2 In my spare time I also enjoy board games and reading and writing fiction. Send me some recommendations if you have any!
+			h2 Keep scrolling to see examples of my work and ways to get in touch.
+			h2 Thank you!
+		div#aboutMeImage
+			img#meImage(src="../images/me.jpg")
 	div#portfolioSection
 		for item in items
 			if item.number%2===0
@@ -30,6 +35,22 @@ block content
 						a.itemLink(href=item.linkurl) Go to !{item.title}
 					div.itemImageDisplay
 						img(src=item.imageurl)
+	div#skillsSection
+		h1 Skills
+		div#icons
+			for icon in icons
+				div.icon
+					div.iconImage
+						img(src=icon.image)
+					h4 !{icon.name}
+	div#contactSection
+		h1 Get In Touch
+		h2 If you'd like to contact me about a project, get in touch:
+		div#contacts
+			a.contactLink(href="https://github.com/Metrollied") Github 
+			a.contactLink(href="https://resume.io/r/seEUW2G5z") My CV
+			a.contactLink(href="mailto:olliecrawford42@gmail.com") olliecrawford42@gmail.com
+
 
 
 	

@@ -176,16 +176,31 @@ h4 {
 }
 
 #aboutMeSection {
-	height: calc(100vh - 3rem);
 	padding-top: 2rem;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: baseline;
+	flex-direction: row;
+	gap: 1em;
 	padding-left: 3rem;
 	padding-bottom: 2rem;
 	border-top: 2px solid var(--viridian-green);
 	border-bottom: 2px solid var(--viridian-green);
+}
+
+#aboutMeText {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+#aboutMeImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#meImage {
+	width: 50%;
+	border-radius: 10rem;
 }
 
 #aboutMeSection > h1 {
@@ -291,9 +306,186 @@ h4 {
 	transform-origin: bottom left;
 }
 
+#skillsSection {
+	gap: 3rem;
+	display: flex;
+	flex-direction: column;
+	padding: 3rem;
+}
+
+#icons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 3rem;
+}
+
+.icon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 7rem;
+	height: 7rem;
+	transition: 0.2s;
+	transition-timing-function: ease;
+}
+
+.icon:hover {
+	transform: scale(1.1);
+}
+
+.iconImage {
+	width: 6rem;
+	height: 5rem;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+
+}
+
+.iconImage > img {
+	width: 6rem;
+	height: auto;
+	max-height: 5rem;
+}
+
+#contactSection {
+	background-color: var(--skobeloff);
+	padding: 3rem;
+	gap: 3rem;
+	display: flex;
+	flex-direction: column;
+}
+
+#contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 3rem;
+}
+
+.contactLink {
+	display: inline-block;
+	position: relative;
+	font-size: 3em;
+	color: var(--white);
+	animation-duration: 2s;
+	animation-name: FadeIn;
+}
+
+.contactLink:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--orange);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.contactLink:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+
+
 
 #footer {
+	background-color: var(--skobeloff);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.hide {
+		visibility: hidden;
+	}
+	#homeLink {
+		visibility: visible;
+	}
+
+	#aboutMeSection {
+		padding-left: 1rem;
+		text-align: left;
+		flex-direction: column;
+		width: 90vw;
+		align-items: center;
+
+	}
+	#aboutMeSection > * {
+		width: 100%;
+	}
+
+	#portfolioSection {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		max-width: 100vw;
+	}
+	
+	.itemStyleOne > *, .itemStyleTwo > * {
+		width: 100%;
+		max-width: none;
+		text-align: left;
+	}
+
+	.itemStyleOne > h1, .itemStyleTwo > h1 {
+		text-align: center;
+	} 
+
+	.itemStyleOne, .itemStyleTwo {
+		flex-direction: column;
+		height: auto;
+		max-width: 100%;
+		gap: 2rem;
+		padding: 2rem 1rem;
+	}
+
+	
+	.itemStyleOne > .itemTextDisplay > h4, .itemStyleTwo > .itemTextDisplay > h4 {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.itemTextDisplay {
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.itemImageDisplay {
+		width: 90vw;
+		align-items: center;
+		align-self: center;
+	}
+
+	.itemLink {
+		align-self: start;
+	}
+
+	#skillsSection {
+		padding: 1rem;
+	}
+
+	#icons {
+		height: 10rem;
+		flex-wrap: nowrap;
+		overflow: scroll;
+	}
+
+	.contactLink {
+		font-size: 1.25rem;
+		text-decoration: underline var(--orange);
+	}
+
+	.contactLink::after {
+		display: none;
+	}
 }

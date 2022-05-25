@@ -5,8 +5,9 @@ html
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		body
 			nav#navBar
-				a.navLink(href="#intro") Home
-				a.navLink(href="#aboutMeSection") About
-				a.navLink(href="/projects") Projects
-				a.navLink(href="/contact") Contact
+				a#homeLink.navLink(href="#intro") Home
+				a.navLink.hide(href="#aboutMeSection") About
+				a.navLink.hide(href="#portfolioSection") Projects
+				a.navLink.hide(href="#skillsSection") Skills
+				a.navLink.hide(href="#contactSection") Contact
 			block content

@@ -1,10 +1,1 @@
 SVG Source: https://flevix.com/fade-in-animation-background-svg/
-
-Items to include for portfolio:
-
-	Plant Inventory App
-	Pub Landing Page
-	Funeral Landing Page?
-	Weather App (Sort + mobile)
-	CV App
-	Memory Game (fix chrome not working)

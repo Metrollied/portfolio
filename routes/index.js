@@ -30,12 +30,75 @@ let items = [
 		linkurl: "https://metrollied.github.io/memory-game/",
 		number: 3
 	},
+	{
+		title: "React Shop",
+		description: "This is a single-page application shop demo, using React and Fake Store API. By using promises in conjunction with React States the site allows a user to add, remove, and view items in their basket (but not to checkout!)",
+		imageurl: "images/shoppingapp.png",
+		linkurl: "https://metrollied.github.io/shopping-app/",
+		number: 4
+	}
+]
+
+let icons = [
+	{
+		name: "HTML5",
+		image: "images/icons/html.svg"
+	},
+	{
+		name: "CSS3",
+		image: "images/icons/css.svg"
+	},
+	{
+		name: "JavaScript",
+		image: "images/icons/javascript-programming-language.svg"
+	},
+	{
+		name: "Pug",
+		image: "images/icons/pug-icon.svg"
+	},
+	{
+		name: "React",
+		image: "images/icons/react-js.svg"
+	},
+	{
+		name: "NodeJS",
+		image: "images/icons/node-js.svg"
+	},
+	{
+		name: "Express",
+		image: "images/icons/expressjs.svg"
+	},
+	{
+		name: "MongoDB",
+		image: "images/icons/mongodb.svg"
+	},
+	{
+		name: "Git",
+		image: "images/icons/git.svg"
+	},
+	{
+		name: "GitHub",
+		image: "images/icons/github.svg"
+	},
+	{
+		name: "NPM",
+		image: "images/icons/npm.svg"
+	},
+	{
+		name: "Webpack",
+		image: "images/icons/webpack.svg"
+	},
+	{
+		name: "Jest",
+		image: "images/icons/jest.svg"
+	},
+	
 ]
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	console.log
-  res.render('index', { items: items });
+  res.render('index', { items: items, icons: icons });
 });
 
 module.exports = router;
