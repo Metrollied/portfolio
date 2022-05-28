@@ -140,7 +140,7 @@ h4 {
 	display: flex;
 	align-items: center;
 	justify-content: right;
-	gap: 1em;
+	gap: 2em;
 	position: fixed;
 	top: 0;
 	width: 100vw;
@@ -148,12 +148,16 @@ h4 {
 	z-index: 5;
 }
 
+#navBar:last-child {
+	margin-right: 1em
+}
+
 .navLink {
 	display: inline-block;
 	position: relative;
 	font-size: 1.5em;
 	color: var(--white);
-	margin-right: 2em;
+	margin-right: 0;
 	animation-duration: 2s;
 	animation-name: FadeIn;
 }
@@ -408,9 +412,23 @@ h4 {
 
 	.hide {
 		visibility: hidden;
+		display: none;
 	}
 	#homeLink {
 		visibility: visible;
+	}
+
+	#navBar {
+		justify-content: flex-start;
+		padding-left: 1rem;
+	}
+
+	.navLink:after {
+		display: none;
+	}
+
+	#introText {
+		left: 1rem;
 	}
 
 	#aboutMeSection {
