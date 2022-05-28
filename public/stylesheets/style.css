@@ -148,9 +148,6 @@ h4 {
 	z-index: 5;
 }
 
-#navBar:last-child {
-	margin-right: 1em
-}
 
 .navLink {
 	display: inline-block;
@@ -178,6 +175,9 @@ h4 {
 .navLink:hover:after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
+}
+.lastLink {
+	margin-right: 1em;
 }
 
 #aboutMeSection {
