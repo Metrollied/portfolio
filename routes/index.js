@@ -32,7 +32,7 @@ let items = [
 	},
 	{
 		title: "React Shop",
-		description: "This is a single-page application shop demo, using React and Fake Store API. By using promises in conjunction with React States the site allows a user to add, remove, and view items in their basket (but not to checkout!)",
+		description: "This is a single-page application shop demo, using React and Fake Store API. By using promises in conjunction with React states the site allows a user to add, remove, and view items in their basket (but not to checkout!)",
 		imageurl: "images/shoppingapp.png",
 		linkurl: "https://metrollied.github.io/shopping-app/",
 		number: 4
